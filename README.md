@@ -1,6 +1,7 @@
 # Mini CRM Platform - Xeno SDE Internship Assignment
 
-A modern Customer Relationship Management (CRM) platform that enables customer segmentation, personalized campaign delivery, and intelligent insights using AI-powered features.
+A modern Customer Relationship Management (CRM) platform that enables customer segmentation, personalised campaign delivery, and intelligent insights using AI-powered features.
+https://excalidraw.com/#json=4_gmrDm96LAtph_dh5_f2,Xtp8UAT8VHRhuGhVtJk1LA  (visit this link for dataflow, architecture, etc.)
 
 ## 🚀 Features
 
