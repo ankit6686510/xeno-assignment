@@ -2,7 +2,7 @@
 
 A modern Customer Relationship Management (CRM) platform that enables customer segmentation, personalised campaign delivery, and intelligent insights using AI-powered features.
 https://excalidraw.com/#json=4_gmrDm96LAtph_dh5_f2,Xtp8UAT8VHRhuGhVtJk1LA  (visit this link for dataflow, architecture, etc.)
-
+swagger ui link:https://xeno-backend-production-49a5.up.railway.app/api-docs/#/
 ## 🚀 Features
 
 ### 1. Data Ingestion & Management
