@@ -22,7 +22,7 @@ const Login = () => {
           <p className="text-gray-500 text-base">Enter your credentials to access your dashboard</p>
         </div>
         <div className="mb-6">
-          <GoogleOAuthProvider clientId="493469432414-k0gid9jplj9sl7am4nuhia9vaneb5og7.apps.googleusercontent.com">
+          <GoogleOAuthProvider clientId="1092582921050-b26qqds59v4a56olivkmnek5it1nbm7f.apps.googleusercontent.com">
             <GoogleLogin
               onSuccess={googleLogin}
               onError={() => toast.error("Google login failed")}
