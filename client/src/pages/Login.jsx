@@ -18,7 +18,7 @@ const Login = () => {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-blue-100 p-4">
       <div className="w-full max-w-md bg-white rounded-3xl shadow-xl overflow-hidden p-8 flex flex-col justify-center">
         <div className="mb-8 text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">Sign in to XenoCrm</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">Sign in to XenoCrm </h2>
           <p className="text-gray-500 text-base">Enter your credentials to access your dashboard</p>
         </div>
         <div className="mb-6">
