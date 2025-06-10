@@ -11,8 +11,6 @@ import { FiUsers, FiMail, FiTarget, FiBarChart2 } from "react-icons/fi";
 import Modal from "../dashboard/Modal";
 import LoadingSpinner from "../common/LoadingSpinner";
 
-//
-
 const CampaignCreatePage = () => {
   const { CustomValueEditor } = useApi();
   const navigate = useNavigate();
