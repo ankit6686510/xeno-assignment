@@ -29,7 +29,7 @@ const Login = () => {
               theme="outline"
               size="large"
               shape="pill"
-              text="continue_with"
+              text="continue with"
               width="100%"
             />
           </GoogleOAuthProvider>

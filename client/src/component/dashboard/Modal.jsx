@@ -10,7 +10,8 @@ const Modal = ({
   blurBackground = true,
 }) => {
   useEffect(() => {
-    // Prevent body scroll when modal is open
+    // Disable scrolling when modal is open
+   
     if (isOpen) {
       document.body.style.overflow = "hidden";
     } else {

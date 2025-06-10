@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+// Tooltip component
 const Tooltip = ({ content, children }) => {
   const [isVisible, setIsVisible] = useState(false);
 

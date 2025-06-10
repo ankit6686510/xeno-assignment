@@ -15,6 +15,7 @@ import {
   FiX,
 } from "react-icons/fi";
 
+// Analytics page
 const Analytics = () => {
   const [campaigns, setCampaigns] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -25,6 +26,7 @@ const Analytics = () => {
     fetchCampaigns();
   }, []);
 
+  // Fetch campaigns with stats
   const fetchCampaigns = async () => {
     try {
       setLoading(true);
@@ -36,6 +38,8 @@ const Analytics = () => {
       setLoading(false);
     }
   };
+  // Calculate metrics for analytics
+  //metric of total campaign, active campaign, total recipients, total sent and success rate
 
   const calculateMetrics = () => {
     const totalCampaigns = campaigns.length;
@@ -53,6 +57,7 @@ const Analytics = () => {
     };
   };
 
+  // Get status color 
   const getStatusColor = (status) => {
     switch (status) {
       case "active":
@@ -65,7 +70,7 @@ const Analytics = () => {
         return "bg-gray-100 text-gray-700";
     }
   };
-
+// Get status icon from fontawesome
   const getStatusIcon = (status) => {
     switch (status) {
       case "active":
@@ -83,6 +88,8 @@ const Analytics = () => {
     return <LoadingSpinner label="Loading Analytics..." />;
   }
 
+
+  // calculating the metrics for the analytics page
   const metrics = calculateMetrics();
 
   return (

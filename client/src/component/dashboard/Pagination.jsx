@@ -1,12 +1,14 @@
 import React from "react";
 
+// Pagination component
+
 const Pagination = ({ itemsPerPage, totalItems, paginate, currentPage }) => {
   const pageNumbers = [];
-
+// Calculate the total number of pages
   for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
     pageNumbers.push(i);
   }
-
+// Render the pagination buttons
   return (
     <nav className="mt-4 flex justify-center">
       <ul className="flex items-center space-x-1">

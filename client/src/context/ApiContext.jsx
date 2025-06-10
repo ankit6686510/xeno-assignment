@@ -7,9 +7,10 @@ import { useLocation } from "react-router-dom";
 
 const ApiContext = createContext();
 
+// ApiProvider component
 export const ApiProvider = ({ children }) => {
-  // Theme state management
-
+  
+// States
   const [authUser, setAuthUser] = useState(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loading, setLoading] = useState(true); // Initial loading state
@@ -21,6 +22,7 @@ export const ApiProvider = ({ children }) => {
 
   const location = useLocation();
 
+  // Verify authentication
   const verifyAuth = async () => {
     try {
       setLoading(true);
@@ -30,13 +32,13 @@ export const ApiProvider = ({ children }) => {
       setAuthUser(response.data.user);
       setIsAuthenticated(true);
     } catch (error) {
-      // Only log if it's not an unauthorized error (which is expected after logout)
+     // If the error is not 401 (unauthorized), log the error
       if (error.response?.status !== 401) {
         console.error("Auth verification error:", error);
       }
       setAuthUser(null);
       setIsAuthenticated(false);
-      // Only redirect to login if we're not already on the login page or home page
+      // If we're not on the login or home page, redirect to login
       if (location.pathname !== "/login" && location.pathname !== "/") {
         navigate("/login", { replace: true });
       }
@@ -79,6 +81,7 @@ export const ApiProvider = ({ children }) => {
     fetchCustomers();
   }, []);
 
+  // Refresh token function to be called when needed
   const refreshToken = async () => {
     try {
       await axiosInstance.post(
@@ -92,6 +95,7 @@ export const ApiProvider = ({ children }) => {
     }
   };
 
+  // Google login
   const googleLogin = async (credentialResponse) => {
     try {
       setLoading(true);
@@ -114,7 +118,7 @@ export const ApiProvider = ({ children }) => {
       setLoading(false);
     }
   };
-
+// Logout function
   const logout = async () => {
     try {
       // Use axiosInstance instead of direct axios call

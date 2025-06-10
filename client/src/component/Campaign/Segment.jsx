@@ -6,12 +6,12 @@ import { toast } from "react-hot-toast";
 import ReactQueryBuilder from "react-querybuilder";
 import "react-querybuilder/dist/query-builder.css";
 import { useNavigate } from "react-router-dom";
-// genini ai integration
-
 import { BsStars as FiSparkles } from "react-icons/bs";
 import { FiUsers, FiMail, FiTarget, FiBarChart2 } from "react-icons/fi";
 import Modal from "../dashboard/Modal";
 import LoadingSpinner from "../common/LoadingSpinner";
+
+//
 
 const CampaignCreatePage = () => {
   const { CustomValueEditor } = useApi();
